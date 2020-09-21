@@ -11,7 +11,7 @@ import os
 
 lr_train_patch_size = 40
 layers_to_extract = [5, 9]
-scale = 2
+scale = 4
 hr_train_patch_size = lr_train_patch_size * scale
 
 rrdn  = RRDN(arch_params={'C':4, 'D':3, 'G':64, 'G0':64, 'T':10, 'x':scale}, patch_size=lr_train_patch_size)
@@ -26,8 +26,8 @@ from ISR.train import Trainer
 #   'discriminator': 0.01
 # }
 loss_weights = {
-  'generator': 0.1,
-  'feature_extractor': 0.9,
+  'generator': 1,
+  'feature_extractor': 0,
   'discriminator': 0
 }
 
@@ -61,14 +61,14 @@ trainer = Trainer(
     flatness=flatness,
     dataname='image_dataset',
     log_dirs=log_dirs,
-    weights_generator=weights_generator_path,
-    weights_discriminator=weights_discriminator_path,
+    weights_generator=None,#weights_generator_path,
+    weights_discriminator=None,#weights_discriminator_path,
     n_validation=40,
 )
 
 trainer.train(
-    epochs=210,
-    steps_per_epoch=1000,
+    epochs=80,
+    steps_per_epoch=500,
     batch_size=16,
-    monitored_metrics={'val_feature_extractor_loss': 'min'}
+    monitored_metrics={'val_generator_PSNR_Y': 'min'}
 )
