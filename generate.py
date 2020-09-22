@@ -1,12 +1,6 @@
 
 import cv2
 import os
-import uuid
-from concurrent.futures import ProcessPoolExecutor, as_completed
-import cv2
-import multiprocessing
-import os
-import sys
 from configuration import DIR_DATASETS, DIR_PROCESSED
 import json
 import shutil

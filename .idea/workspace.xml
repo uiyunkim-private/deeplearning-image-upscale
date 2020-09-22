@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5eddc20e-3843-4867-a795-4003588586e5" name="Default Changelist" comment="updated for linux system" />
+    <list default="true" id="5eddc20e-3843-4867-a795-4003588586e5" name="Default Changelist" comment="updated for linux system">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/configuration.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,7 +21,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor.code.editing" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager">
     <configuration name="generate" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -92,9 +95,10 @@
       <screen x="72" y="30" width="2488" height="1410" />
     </state>
     <state width="2465" height="483" key="GridCell.Tab.1.right/72.30.2488.1410@72.30.2488.1410" timestamp="1600736118683" />
-    <state x="305" y="325" width="1022" height="737" key="SettingsEditor" timestamp="1600695303198">
-      <screen x="72" y="30" width="2488" height="1410" />
+    <state x="157" y="227" width="900" height="722" key="SettingsEditor" timestamp="1600743103463">
+      <screen x="0" y="23" width="1680" height="973" />
     </state>
+    <state x="157" y="227" width="900" height="722" key="SettingsEditor/0.23.1680.973@0.23.1680.973" timestamp="1600743103463" />
     <state x="305" y="325" width="1022" height="737" key="SettingsEditor/72.30.2488.1410@72.30.2488.1410" timestamp="1600695303198" />
     <state x="979" y="351" width="672" height="678" key="search.everywhere.popup" timestamp="1600694285355">
       <screen x="72" y="30" width="2488" height="1410" />
