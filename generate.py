@@ -7,13 +7,13 @@ import cv2
 import multiprocessing
 import os
 import sys
-from configuration import STORAGE_DIR_WIN
+from configuration import DIR_DATASETS, DIR_PROCESSED
 import json
 import shutil
 from tqdm import tqdm
 from multiprocessing import Pool,Lock
 import random
-
+from pathlib import Path
 lock = Lock()
 
 class dataset_generator:
@@ -160,7 +160,7 @@ class dataset_generator:
                     x_high_res = image_high_res_sample.shape[1]
 
                 cap.release()
-                cv2.destroyAllWindows()
+
         except Exception as e:
             self.list_defected.append(_dict_pair['id'])
             print("[Exception] Failed To Extract Frame. Deleting",_dict_pair['id'])
@@ -240,11 +240,11 @@ class dataset_generator:
 
 if __name__ == '__main__':
 
-    search_root = os.path.join(STORAGE_DIR_WIN,'video','porn','pornhub')
-    dataset_dir = os.path.join(STORAGE_DIR_WIN,'dataset','dlss','pornhub_x4')
+
+
     generator = dataset_generator(
-                                  search_root=search_root,
-                                  dataset_dir=dataset_dir,
+                                  search_root=DIR_DATASETS,
+                                  dataset_dir=DIR_PROCESSED,
                                   dict_filter={
                                                'max_duration':1500,
                                                'min_duration':700, 
