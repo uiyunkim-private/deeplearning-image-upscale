@@ -2,4 +2,4 @@ dataset/
 checkpoint/
 weights/
 logs/
-.idea/
+.idea
