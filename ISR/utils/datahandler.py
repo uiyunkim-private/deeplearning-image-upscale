@@ -55,11 +55,12 @@ class DataHandler:
     
     def _matching_datasets(self):
         """ Rough file name matching between lr and hr directories. """
-        # LR_name.png = HR_name+x+scale.png
-        # or
-        # LR_name.png = HR_name.png
+
         LR_name_root = [x.split('.')[0].rsplit('x', 1)[0] for x in self.img_list['lr']]
         HR_name_root = [x.split('.')[0] for x in self.img_list['hr']]
+
+        mismatch = [HR_name_root[x] for x in range(len(HR_name_root)) if HR_name_root[x] != LR_name_root[x]]
+
         return np.all(HR_name_root == LR_name_root)
     
     def _not_flat(self, patch, flatness):
