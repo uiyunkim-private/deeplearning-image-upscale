@@ -3,7 +3,7 @@ from ISR.models import Discriminator
 from ISR.models import Cut_VGG19
 import os
 
-dataset_dir = r"G:\내 드라이브\storage\dataset\dlss\pornhub_x4"
+dataset_dir = r"G:\내 드라이브\storage\dataset\dlss\"
 # os.remove('logs')
 # os.remove('weights')
 # os.makedirs('logs')
