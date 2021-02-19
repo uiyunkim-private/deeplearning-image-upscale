@@ -242,7 +242,6 @@ if __name__ == '__main__':
                                   dict_filter={
                                                'max_duration':1500,
                                                'min_duration':700, 
-                                               'keywords': ['asian','korean','japanese','chinese','asia','korea','china','japan'],
                                                'high_res':1080,
                                                'low_res':240,
                                                'scale_factor':4
